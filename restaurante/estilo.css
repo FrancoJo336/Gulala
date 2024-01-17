@@ -1,0 +1,99 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    height: 100vh;
+    margin: 0;
+}
+.menu-item {
+    border: 1px solid #0f0;
+    padding: 10px;
+    margin: 10px;
+}
+/* Estilos para dispositivos con ancho de pantalla menor a 600px */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+}
+.main {
+    text-align: center;
+    padding: 20px;
+}
+.span1 {
+     color: green;
+}
+.span2 {
+    color: orange;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin:20px 0;
+}
+button{
+    --glow-color: rgb(145, 239, 140);
+    --glow-spread-color: rgba(124, 209, 88, 0.781);
+    --enhanced-glow-color: rgb(144, 189, 141);
+    --btn-color: rgb(23, 84, 6);
+    border: .25cm solid var(--glow-color);
+    padding: 1cm 3cm;
+    color: var(--glow-color);
+    font-size:25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1cm;
+    outline: none;
+    box-shadow: 0 0 1cm .25cm var(--glow-color),
+        0 0 4cm 1cm var(--glow-spread-color),
+        inset 0 0 .75cm .25cm var(--glow-color);
+    text-shadow: 0 0 .5cm var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    margin: auto;
+}
+button::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2cm);
+    opacity: .7;
+    
+}
+button:hover{
+    color:var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow:0 0 1cm .25cm var(--glow-color),
+            0 0 4cm 2cm var(--glow-spread-color),
+            inset 0 0 .75cm .25cm var(--glow-color);
+}
+button:active{
+    box-shadow:0 0 1cm .25cm var(--glow-color),
+    0 0 2,5cm 2cm var(--glow-spread-color),
+    inset 0 0 .5cm .25cm var(--glow-color);
+}
+.responsive-image {
+    max-width: 600px;  
+    width: 100%;
+    height: auto;
+}
+
